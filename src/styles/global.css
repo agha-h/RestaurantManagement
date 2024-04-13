@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700&display=swap');
+
+@layer base {
+    body {
+        @apply bg-[#fdfdfd] font-['Jost'] font-light text-sm md:text-base text-[#222] leading-loose cursor-default;
+    }
+
+    h2 {
+        @apply pb-8 font-medium text-[#fe4039] text-2xl text-center uppercase tracking-widest;
+    }
+
+    h3 {
+        @apply my-8 text-center text-xl font-medium uppercase tracking-widest;
+    }
+
+    h4 {
+        @apply text-red-700 text-lg md:text-xl font-medium;
+    }
+
+    button {
+        @apply cursor-pointer transition-all ease-in duration-300;
+    }
+}
+
+@layer components {
+    /* HEADER COMPONENT */
+    .navigation a {
+        @apply text-sm md:text-base hover:text-[#fe4039] font-medium uppercase cursor-pointer transition-all ease-in duration-300;
+    }
+
+    .navigation .mobile-menu {
+        @apply absolute top-[-30vh] left-0 w-full flex flex-col justify-center items-center bg-[#1b1b1b] transition-all ease-in duration-500;
+    }
+
+    .navigation .mobile-menu.active {
+        @apply top-16;
+    }
+
+    /* CONTACT COMPONENT */
+    .error-text {
+        @apply text-xs md:text-sm text-red-700 font-medium;
+    }
+}
